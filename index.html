@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Surakkitha Galappaththi | Data Analytics &amp; Machine Learning Portfolio</title>
+  <meta name="description" content="Portfolio of G. W. Surakkitha Galappaththi: BigQuery pipelines, CRM analytics, reporting automation and machine learning.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="#top">SG</a>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#ml">ML</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <p class="eyebrow">Data Analytics &middot; Machine Learning</p>
+    <h1>G. W. Surakkitha Galappaththi</h1>
+    <p class="lead">I build data pipelines, dashboards and reporting systems that turn raw business data into decisions. Recently a Junior Data Analyst (industrial placement) at Torch Labs Software LLC.</p>
+    <div class="cta">
+      <a class="btn primary" href="#projects">View projects</a>
+      <a class="btn" href="#contact">Get in touch</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>I'm a BSc (Hons) Artificial Intelligence and Data Science student at the Informatics Institute of Technology, awarded by Robert Gordon University (UK), returning to complete my final year after a placement year in industry.</p>
+    <p>During my placement I worked across two B2C proxy brands and a B2B operation, with my work centred on BigQuery data pipelines, CRM analytics and weekly performance reporting.</p>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <article class="job">
+      <div class="job-head">
+        <h3>Junior Data Analyst (Industrial Placement)</h3>
+        <span class="muted">Torch Labs Software LLC</span>
+      </div>
+      <ul>
+        <li>Designed and maintained BigQuery pipelines and a layered SQL architecture feeding Looker Studio dashboards.</li>
+        <li>Produced recurring weekly analytics and campaign reports for two B2C brands, with actionable insights for the CEO and sales team.</li>
+        <li>Wrote standard operating procedures and flowcharts for every recurring reporting responsibility, then trained a successor.</li>
+        <li>Integrated warehouse data into CRM platforms through Cloud Run services and the CRM APIs.</li>
+      </ul>
+    </article>
+  </section>
+
+  <section id="projects">
+    <h2>Data analytics projects</h2>
+    <p class="muted note">Project descriptions are written at a high level. No customer data, credentials or confidential figures are shown.</p>
+
+    <div class="grid">
+
+      <article class="card">
+        <h3>CRM analytics &amp; sales dashboard</h3>
+        <p>A three-layer SQL architecture (materialised base tables, KPI views, Looker Studio) powering a sales team dashboard across five synced CRM tables.</p>
+        <ul>
+          <li>20 KPIs across Sales Team Overview and Agent Performance pages</li>
+          <li>Standardised owner columns so one filter control works across all data sources</li>
+          <li>Follow-up scorecards anchored to the current date, independent of the date-range filter</li>
+        </ul>
+        <p class="tags"><span>BigQuery</span><span>SQL</span><span>Looker Studio</span></p>
+      </article>
+
+      <article class="card">
+        <h3>Commission attribution pipeline</h3>
+        <p>A BigQuery design for attributing sales commissions across B2C and B2B, with inbound and outbound acquisition logic.</p>
+        <ul>
+          <li>Six sale types evaluated in priority order (first-time, recurring, win-back, churn prevention, upselling, one-time)</li>
+          <li>Three-step agent attribution waterfall: coupon code, identity match with date gating, then fallback</li>
+          <li>Partitioned and clustered materialised tables with scheduled queries for cost control, and a Postgres output layer</li>
+        </ul>
+        <p class="tags"><span>BigQuery</span><span>Scheduled queries</span><span>Postgres</span></p>
+      </article>
+
+      <article class="card">
+        <h3>Warehouse-to-CRM sync service</h3>
+        <p>A Cloud Run function that syncs six BigQuery customer tables into a Teable CRM base on an hourly schedule.</p>
+        <ul>
+          <li>Clean historical backfill, then hourly incremental runs via Cloud Scheduler</li>
+          <li>Python scripts to add derived fields (such as source-type bucketing) to CRM tables through the API</li>
+        </ul>
+        <p class="tags"><span>GCP Cloud Run</span><span>Cloud Scheduler</span><span>Python</span><span>REST API</span></p>
+      </article>
+
+      <article class="card">
+        <h3>Weekly web analytics reports</h3>
+        <p>Recurring weekly HTML reports with custom SVG charts covering site visits, reach, revenue, product margins and recommendations.</p>
+        <ul>
+          <li>Ran from January to July 2026</li>
+          <li>Surfaced recurring issues such as product-level negative margins, funnel drop-off and email verification friction</li>
+          <li>Built a four-week cross-period dashboard (React and a ReportLab PDF) for traffic, funnel and conversion paths</li>
+        </ul>
+        <p class="tags"><span>HTML/SVG</span><span>React</span><span>ReportLab</span></p>
+      </article>
+
+      <article class="card">
+        <h3>UTM &amp; PostHog campaign attribution</h3>
+        <p>Weekly reports tracing forum marketing campaigns from first click to revenue using UTM tagging and PostHog.</p>
+        <ul>
+          <li>Identified the dominant revenue channel and the first revenue from a new channel</li>
+          <li>Recommended follow-up on sign-ups that had not converted</li>
+        </ul>
+        <p class="tags"><span>PostHog</span><span>UTM tracking</span><span>Attribution</span></p>
+      </article>
+
+      <article class="card">
+        <h3>Weekly revenue reports for a second brand</h3>
+        <p>Six structured weekly reports built from Looker Studio dashboards, each following a consistent 10 to 11 section format.</p>
+        <ul>
+          <li>Flagged persistently low-margin product lines and a declining new-subscription trend</li>
+          <li>Documented churn of a historically dominant account</li>
+        </ul>
+        <p class="tags"><span>Looker Studio</span><span>Reporting</span><span>Business insight</span></p>
+      </article>
+
+      <article class="card">
+        <h3>Reporting SOPs &amp; flowcharts</h3>
+        <p>Six standard operating procedures, each with a Word document and a flowchart, covering every recurring reporting task so the work could be handed over.</p>
+        <ul>
+          <li>Weekly analytics, forum campaign performance, GTM feedback loops, daily sales overview and more</li>
+          <li>Used a consistent nine-section template</li>
+        </ul>
+        <p class="tags"><span>Documentation</span><span>Process design</span></p>
+      </article>
+
+      <article class="card">
+        <h3>Lead-capture campaign design</h3>
+        <p>Designed a "Spin to Win" popup to capture emails from anonymous website visitors.</p>
+        <ul>
+          <li>Eight-slot wheel with a 60/40 win split and four discount tiers</li>
+          <li>Python script generating unique promotion-code pools per tier as CSV files</li>
+        </ul>
+        <p class="tags"><span>Python</span><span>Growth analytics</span><span>Stripe</span></p>
+      </article>
+
+      <article class="card">
+        <h3>CRM data quality clean-up</h3>
+        <p>Diagnosed duplicate-value validation errors and audited contact and company records.</p>
+        <ul>
+          <li>Identified 28 duplicate company groups and over 465 duplicate or blank contact entries</li>
+          <li>Flagged records needing manual review where automated matching was unsafe</li>
+        </ul>
+        <p class="tags"><span>Data cleaning</span><span>Deduplication</span></p>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="ml">
+    <h2>Machine learning projects</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>Smart Water Tank Monitoring System</h3>
+        <p class="muted">University project, Robert Gordon University (CM3603)</p>
+        <p>An IoT and edge-computing system that monitors water levels using sensors and ML models.</p>
+        <ul>
+          <li>Raspberry Pi 4 with ultrasonic and temperature sensors</li>
+          <li>scikit-learn models (Decision Tree, Linear Regression)</li>
+          <li>Flask backend, React/TypeScript frontend with Socket.IO, deployed on Google Cloud Run</li>
+        </ul>
+        <p class="tags"><span>scikit-learn</span><span>Flask</span><span>React</span><span>Raspberry Pi</span></p>
+      </article>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div><h3>Data &amp; analytics</h3><p>SQL, BigQuery (partitioning, clustering, scheduled queries), Postgres, Looker Studio, PostHog, UTM analytics</p></div>
+      <div><h3>Cloud &amp; engineering</h3><p>Google Cloud Run, Cloud Scheduler, REST APIs, Python, Flask</p></div>
+      <div><h3>Machine learning</h3><p>scikit-learn, Decision Trees, Linear Regression, edge computing</p></div>
+      <div><h3>Reporting &amp; tools</h3><p>HTML/SVG reporting, React/TypeScript, ReportLab, Teable and Twenty CRMs, technical documentation</p></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Open to graduate and internship opportunities in data analytics and machine learning.</p>
+    <p>
+      <a class="btn primary" href="mailto:YOUR_EMAIL@example.com">Email me</a>
+      <a class="btn" href="https://github.com/YOUR_USERNAME">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/YOUR_LINKEDIN">LinkedIn</a>
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 G. W. Surakkitha Galappaththi</p>
+</footer>
+
+</body>
+</html>
